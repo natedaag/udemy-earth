@@ -3,31 +3,22 @@ package com.udemy.earth;
 public class Animal {
 	
 	int age;
-	String type;
-	boolean furry;
 	String gender;
+	int weightInPounds;
 	
-	public Animal(int age, String type, boolean furry, String gender) {
+	public Animal(int age, String gender, int weightInPounds) {
 		super();
 		this.age = age;
-		this.type = type;
-		this.furry = furry;
 		this.gender = gender;
-	}
-	
-	public void about() {
-		System.out.println("I'm a " + type);
+		this.weightInPounds = weightInPounds;
 	}
 	
 	public void eat() {
 		System.out.println("I'm eating");
 	}
-	public void play() {
-		System.out.println("I'm playing");
-	}
-	public void nap() {
+
+	public void sleep() {
 		System.out.println("I'm napping");
 	}
-	
 	
 }
