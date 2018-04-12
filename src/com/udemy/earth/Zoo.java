@@ -4,23 +4,24 @@ public class Zoo {
 
 	public static void main(String[] args) {
 		
-		Animal rabbit = new Animal(1, "boy", 5);
-		Animal snake = new Animal(2,  "maybe", 6);
-		Animal panda = new Animal(5, "girl", 8);
+		Sparrow birdOne = new Sparrow(1, "boy", 5);
+		Chicken birdTwo = new Chicken(2,  "maybe", 6);
+		Animal birdThree = new  Bird(5, "girl", 8);
 		
-		Bird penguin = new Bird(2, "boy", 3);
-		Bird pigeon = new Bird(3, "girl", 22);
+		Animal penguin = new Bird(2, "boy", 3);
+		Bird pigeon = new Sparrow(3, "girl", 22);
 		
 		Fish bass = new Fish(8, "girl", 12);
 		Fish tuna = new Fish(3, "boy", 4);
 		Chicken chicken = new Chicken(1,"girl", 7);
 		
-		rabbit.eat();
-		rabbit.sleep();
-		snake.eat();
-		snake.sleep();
-		panda.eat();
-		panda.sleep();		
+		
+		birdOne.eat();
+		birdOne.sleep();
+		birdTwo.eat();
+		birdTwo.sleep();
+		birdThree.eat();
+		birdThree.sleep();		
 		
 		penguin.eat();
 		penguin.sleep();
@@ -35,7 +36,17 @@ public class Zoo {
 		tuna.swim();
 		
 		chicken.eat();
+		chicken.move();
+		
+		moveAnimal(pigeon);
 				
+		Flyable birdFlies = new Sparrow(1, "m", 4);
+		birdFlies.fly();
 	}
+	
+	public static void moveAnimal(Animal animal) {
+		animal.move();
+	}
+	
 
 }
